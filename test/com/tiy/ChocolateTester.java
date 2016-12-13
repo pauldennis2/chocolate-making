@@ -99,5 +99,9 @@ public class ChocolateTester {
         assertEquals (Integer.MAX_VALUE, smalls);
         smalls = chocMaker.makeChocolate(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertEquals (Integer.MAX_VALUE % 5, smalls);
+        smalls = chocMaker.makeChocolate(Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        assertEquals (Integer.MAX_VALUE, smalls);
+        smalls = chocMaker.makeChocolate(Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
+        assertEquals (-1, smalls);
     }
 }
